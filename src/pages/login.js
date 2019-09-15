@@ -29,7 +29,13 @@ export default class login extends Component {
                             <Input style={styles.Text} secureTextEntry />
                         </Item>
                     </Form>
-                    <Button primary style={styles.Button}>
+                    <Button
+                        primary
+                        style={styles.Button}
+                        onPress={() => {
+                            this.props.navigation.navigate('Main');
+                        }}
+                    >
                         <Text>Entrar</Text>
                     </Button>
                 </Content>

@@ -2,18 +2,20 @@ import { createStackNavigator } from 'react-navigation';
 
 import Login from './pages/login';
 import Main from './pages/main';
+import CreatePromo from './pages/createpromo';
 
 export default createStackNavigator(
-    {
-        Login,
-        Main
-    },
-    {
-        navigationOptions: {
-            headerStyle: {
-                backgroundColor: '#251e3e'
-            },
-            headerTintColor: '#851e3e'
-        }
+  {
+    Login,
+    Main,
+    CreatePromo
+  },
+  {
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#051e3e'
+      },
+      headerTintColor: '#FFF'
     }
+  }
 );

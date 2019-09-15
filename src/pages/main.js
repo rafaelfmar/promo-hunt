@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
-import { FlatList, StyleSheet, TouchableOpacity } from 'react-native';
-import {
-  Body,
-  Container,
-  Content,
-  Card,
-  CardItem,
-  Fab,
-  Text
-} from 'native-base';
+import { FlatList, StyleSheet } from 'react-native';
+import { Container, Content, Fab, Text } from 'native-base';
+
+import PromoItem from '../components/promoitem';
 
 export default class main extends Component {
   static navigationOptions = {
@@ -19,33 +13,20 @@ export default class main extends Component {
     products: [
       {
         title: 'promo 1',
-        description: 'desc 1'
+        description: 'desc 1',
+        price: 10.99,
+        link: 'https://www.google.com/'
       },
       {
         title: 'promo 2',
-        description: 'desc 2'
-      },
-      {
-        title: 'promo 3',
-        description: 'desc 3'
+        description: 'desc 2',
+        price: 13.9,
+        link: 'https://www.google.com/'
       }
     ]
   };
 
-  renderItem = ({ item }) => (
-    <TouchableOpacity>
-      <Card button>
-        <CardItem>
-          <Text style={styles.header}>{item.title}</Text>
-        </CardItem>
-        <CardItem>
-          <Body>
-            <Text>{item.description}</Text>
-          </Body>
-        </CardItem>
-      </Card>
-    </TouchableOpacity>
-  );
+  renderItem = ({ item }) => <PromoItem item={item} />;
 
   render() {
     return (
@@ -76,9 +57,6 @@ const styles = StyleSheet.create({
   },
   fab: {
     backgroundColor: '#451e3e',
-    fontWeight: 'bold'
-  },
-  header: {
     fontWeight: 'bold'
   }
 });

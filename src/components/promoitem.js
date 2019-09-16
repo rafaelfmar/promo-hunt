@@ -3,9 +3,13 @@ import { TouchableOpacity, StyleSheet } from 'react-native';
 import { Body, Left, Card, CardItem, Text, Thumbnail } from 'native-base';
 
 const promoitem = props => {
-  const { title, description, price } = props.item;
+  const { title, description, price, link } = props.item;
   return (
-    <TouchableOpacity>
+    <TouchableOpacity
+      onPress={() =>
+        props.navigation.navigate('WebView', { title: title, link: link })
+      }
+    >
       <Card>
         <CardItem>
           <Left>

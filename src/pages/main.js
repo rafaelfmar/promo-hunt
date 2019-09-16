@@ -26,7 +26,9 @@ export default class main extends Component {
     ]
   };
 
-  renderItem = ({ item }) => <PromoItem item={item} />;
+  renderItem = ({ item }) => (
+    <PromoItem item={item} navigation={this.props.navigation} />
+  );
 
   render() {
     return (

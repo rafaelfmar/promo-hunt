@@ -12,6 +12,7 @@
         "native-base": "^2.13.8",
         "react": "16.8.6",
         "react-native": "0.60.5",
+        "react-native-webview": "^7.0.5",
         "react-navigation": "2.18.3"
     },
     "devDependencies": {
